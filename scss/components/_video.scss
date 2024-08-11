@@ -1,0 +1,118 @@
+.video {
+  background: url("./images/Video-BG.png") $Color-Secondary no-repeat center /
+    cover;
+  padding: 141px 0 210px;
+  color: $Color-White;
+  &-heading {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 50px;
+    text-align: center;
+    max-width: 1056px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+  }
+  &-player {
+    max-width: 1056px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 125px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-play {
+    @include absoluteCenter("both");
+    padding: 42px;
+    background-color: $Color-Pink;
+    color: $Color-White;
+    border-radius: 100%;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    font-size: 20px;
+    &:hover {
+      background-color: $Color-White;
+      color: $Color-Pink;
+    }
+  }
+  &-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 75px;
+  }
+  &-item {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 0 41px;
+  }
+  &-item-image {
+    width: 233px;
+    flex-shrink: 0;
+    position: relative;
+  }
+  &-item-play {
+    @include absoluteCenter("both");
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    &:hover {
+      color: $Color-Pink;
+    }
+  }
+  &-title {
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  &-desc {
+    font-weight: 400;
+    line-height: 28px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
+  }
+  @media screen and (max-width: 1024px) {
+    &-player {
+      max-width: 900px;
+    }
+    &-list {
+      flex-direction: column;
+      gap: 50px 0;
+    }
+    &-item {
+      width: 80%;
+    }
+  }
+  /* Mobile: width < 740px */
+  @media only screen and (max-width: 46.1875em) {
+    padding: 83px 0 50px;
+    &-player {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    &-play {
+      padding: 35px;
+    }
+    &-list {
+      gap: 50px 0;
+    }
+    &-item {
+      width: 100%;
+      flex-direction: column;
+      text-align: center;
+    }
+    &-item-image {
+      width: 100%;
+      margin-bottom: 40px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
