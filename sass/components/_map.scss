@@ -1,0 +1,66 @@
+.map {
+  position: relative;
+  padding: 249px 0 256px;
+  &-content {
+    text-align: center;
+  }
+  &-heading {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 50px;
+    max-width: 614px;
+    color: $Color-Black;
+    margin: 0 auto 32px;
+  }
+  &-desc {
+    max-width: 470px;
+    margin: 0 auto 36px;
+    font-weight: 400;
+    line-height: 28px;
+    color: $Color-Grey-6F;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
+  }
+  &-btn {
+    padding: 18px 56px;
+    font-weight: 700;
+    background-color: $Color-Primary;
+    color: $Color-White;
+    border-radius: 122px;
+    transition: all 0.2s linear;
+    border: 1px solid $Color-Primary;
+    &:hover {
+      background-color: $Color-White;
+      color: $Color-Primary;
+    }
+  }
+  &-bg1,
+  &-bg2 {
+    position: absolute;
+  }
+  &-bg1 {
+    max-width: 500px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  &-bg2 {
+    max-width: 700px;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 172px 0 116px;
+    &-bg1 {
+      max-width: 300px;
+    }
+    &-bg2 {
+      max-width: 500px;
+    }
+  }
+}
